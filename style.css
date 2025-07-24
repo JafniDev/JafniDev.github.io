@@ -20,9 +20,6 @@ from
     margin-top: 0px;
     margin-bottom: 0px;
 
-
-
-
 }
 
 to 
@@ -30,41 +27,63 @@ to
     margin-top: 50px;
     margin-bottom: 50px;
 
-    
 }
 }
-
-
 
 /*Poster Animation Fade*/
 @keyframes PosterFade {
 from  
 {
     opacity: 0;
-    height: 280px;
-}
+    border-radius: 0px;
+    background-size: 80%;
 
+}
 to 
 {
     opacity: 1;
-    height: 300px;
+    border-radius: 20px;
+    background-size: 100%;
 
-    
 }
 }
 
-/*
-#page1{}
-#page2{}
-#page3{}
-*/
+.PageContent{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.PageContent h1{
+    font-size: 40px;
+
+}
+
+
+
+
+.oddNum{
+   background-color: #5D7F03;
+   padding: 5px;
+   color: white;
+}
+
+.evenNum{
+   background-color: #FF0000;
+   padding: 5px;
+   color: white;
+}
+
+
+
 
 header{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    background-color: #6B1100;
-    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    padding: 20px;
 }
 
 /* === Fonts === */
@@ -81,277 +100,129 @@ body {
     margin: 0px;
 }
 
-nav{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #8F1800;
 
+
+nav ul{
+display: flex;
+flex-direction: row;
 }
-
 
 nav ul li{
-display:inline;
-
-
+margin: 0px 10px;
+list-style-type: none;
 }
 
-nav ul li button{
+#qrCodeImg{
+    display: flex;
+    justify-content: left;
+    margin: 0px 10px;
+}
+
+button{
 
     width: 180px;
     border-radius: 20px;
-    color: #8F1800;
-    background-color: white;
+    color: black;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
     padding: 5px;
      border: none;
      transition: 0.5s;
 }
 
-nav ul li button:hover{
+button:hover{
 
-    color: white;
-    background-color: #DF5605;
     width: 200px;
 
+    color: white;
+    background-color: #5D7F03;
+
 }
 
-.topicTitle{
-    background-color: #DF5605;
-    text-align: center;
-    color: white;
-    font-size: 60px;
+#pizzaDisplay{
     
-}
-
-
-
-.info{
-    padding: 0px 20px;
-}
-
-table{
-    text-align: center;
-   
-}
-
-
-table td{
-
-background-color: white;
-
-}
-
-table td ul li{
-list-style-type:decimal;
-text-align: left;
-}
-
-table h3{
-    color: white;
-    background-color: #648908;
-    padding: 5px 0px;
-}
-
-.infotext{
-    padding: 0px 20px;
-
-}
-
-.page h2{
-    background-color: #648908;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.imageandtextinOne{
+    margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
- #lastPizzaList li
- {
-list-style-type:none;
-
-        text-align: center;
-}
-
-
-.backIcon{
-    display: flex;
     justify-content: center;
-    padding: 10px;
-
 }
 
-.backIcon img{
-
-    width: 120px;
-transition: 0.5s;
+/*Page 2*/
+#pizzaDisplay div strong{
+      color: white;
+    background-color: #5D7F03;
+    padding: 5px;
 }
 
-.backIcon img:hover{
+#nextAndBack{
+display: none;
 
-    width: 130px;
-    
-}
-
-#Shows{
-    display: flex;
-    flex-direction: row;
-}
-
-#Shows div{
-    padding: 10px;
-}
-
-#CurrentShow{
-    width: 530px;
-}
-
-.LandscapePoster{
-    animation-name: PosterFade;
-    animation-duration: 0.5s;
-}
-
-#ShowTitle{
-    background-color: #8F1800;
-    padding: 10px 5px;
-    color: white;
-}
-
-
-
-#ListOfShows table tr td img{
-transition: 0.15s;
-}
-
-#ListOfShows table tr td img:hover{
-    border: #8F1800 5px solid;
    
 
 }
 
-#PlayMinigame{
+
+
+#pizzaSelector{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 500px;
-
 }
 
-#Minigame
-{   
-    flex-direction: column;
-    justify-content: center;
+#pizzaSelector table tr td img{
+    width: 200px;
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
+#pizzaSelector table tr td img:hover{
+    width: 210px;
+    opacity: 1;
+
     
-    background-image: url("images/MinigameBackground.png");
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1280px;
-
 }
 
-#resultScreen
-{   
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #EAEAEA;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1280px;
-
-}
-
-
-
-#MinigameTop{
+#showCard{
     display: flex;
-    flex-direction: row;
+     flex-direction: column;
+     justify-content: center;
+   margin: auto;
+}
+
+#showCard img{
+   border-radius: 20px;
+}
+
+
+#posterSelector table tr{
+    display:  flex;
+    flex-wrap: wrap;
     justify-content: center;
 
+} 
+
+.poster{
+   height: 250px;
+   opacity: 0.8;
+   transition: 0.2s;
+} 
+
+.poster:hover{
+   height: 260px;
+   opacity: 1;
+
+} 
+
+
+
+#closepage{
+display: none;
 }
 
-#MinigameTop h1{
-    padding: 0px 10px;
-}
-
-#MinigameMiddle{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
-
-#MinigameBottom{
-    
-    background-color: rgba(0, 0, 0, 0.5);;
-    
-}
-
-#MinigameBottom ul{
-    
-     display: flex;
-    flex-direction: row;
-
-    
-   
-}
-
-#MinigameBottom ul li{
-    
- display: flex;
- justify-content: center;
-    
-background-color: aliceblue;
-border-radius: 50px;
-
-margin: 0px 10px;
-
-width: 300px;
-height: 100px;
-transition: 0.2s;
-}
-
-#MinigameBottom ul li:hover{
-    
-     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-background-color: #648908;
-color: white;
-
-}
-
-#MinigameBottom ul li p{
-    
-margin: auto;
-}
-
-#correct{
-    display: flex;
-    margin: auto;
-    background-color: #648908;
-    color: white;
-    justify-content: center;
-    width: 100%;
-}
-
-#wrong{
-    display: flex;
-    margin: auto;
-    background-color: #8F1800;
-    color: white;
-    justify-content: center;
-    width: 100%;
-}
 
 /*CSS for responsive menu*/
 #hamIcon{display:none;}
+
 @media (max-width:800px)
 {
 /*make a menu items vertical*/
@@ -360,16 +231,10 @@ nav ul li{display:block;}
 #hamIcon{
     
     display:block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: none;
-    color: #8F1800;
-    background-color: white;
-    border-radius: 20px;
-    height: 85px;
 
 }
 /*hide the menu item list*/
+
 nav ul{
     display:none;
     
@@ -380,46 +245,103 @@ nav ul li button{
     height: 30px;
 }
 
-.imageandtextinOne img{
-    width: 250px;
+
+#qrCodeImg{
+    display: none;
 }
 
-table tr{
+#pizzaSelector{
+    display: none;
+}
+
+#nextAndBack{
 display: flex;
-flex-direction: column;
+justify-content: space-between;
+   
+
 }
 
-table td ul li{
-
-text-align: center;
+#nextAndBack button{
+     background-color: #C9C9C9;
+     width: 100px;
+     margin: 0px 10px;
 }
 
-#Shows{
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+#nextAndBack button:hover{
+     background-color: #5D7F03;
+     color: white;
+     width: 110px;
+
 }
 
-#Minigame
-{   
+#showCard{
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+   
+}
 
-    width: 600px;
+#showCard img{
+    width: 280px;
+   
+}
+
+}
+
+@media (max-width:400px)
+{
+    .PageContent{
+        text-align: center;
+    }
+
+    header{
+        justify-content: center;
+
+    }
+
+    nav
+    {
+        display: flex;
+        flex-direction: row; 
+        
+    }
+
+
+
+    header img
+    {
+        height: 100px;
+        
+    }
+
     
+#pizzaDisplay{
 
+    width: 100%;
+    flex-direction: column;
+justify-content: center;
+}
+
+.poster{
+   height: 130px;
+transition: 0.3s;
+} 
+
+.poster:hover{
+   height: 135px;
+
+} 
 
 }
 
-#resultScreen
-{   
-
-    width: 600px;
-
-}
-
-}
 /*to unhide menu items*/
 .menuShow{
     
     display:block;
 
+}
+
+.LandscapePoster{
+    animation-name: PosterFade;
+    animation-duration: 0.5s;
 }
