@@ -5,11 +5,14 @@ const page1btn=document.querySelector("#page1btn");
 const page2btn=document.querySelector("#page2btn");
 const page3btn=document.querySelector("#page3btn");
 const hamBtn = document.querySelector("#hamIcon");
-const navigation = document.querySelector("nav");
 var allpage =document.querySelectorAll(".page");
+const closePage=document.querySelector("#Close");
+
+//sound
 const clickSound = new Audio('audio/Click.wav');
 const posterSound = new Audio('audio/posterClick.wav');
 const pageSound = new Audio('audio/pageClick.wav');
+const eatSound = new Audio('audio/Eat.wav');
 
 //var for page 2
 const pizzaNametext=document.querySelector("#pizzanameInfo");
@@ -21,7 +24,6 @@ const nextBtn=document.querySelector("#nextBtn");
 
 var onePizzabtn=document.querySelectorAll(".pizzaBtn");
 var onePizzaImg=document.querySelector("#pizzaImg");
-var index;
 var pizzaIndex = 1;
 
 //var for page 3
@@ -30,9 +32,17 @@ const showTitle =document.querySelector("#ShowTitle");
 const showDesc =document.querySelector("#ShowDesc");
 const showImage = document.querySelector('#CurrentShow');
 
-
+//var for minigame
+const personSprite = document.querySelector("#personSprite");
+const pizzaSprite = document.querySelector("#pizzaSprite");
+const EatBtn = document.querySelector("#EatBtn");
+var Canpress = false;
+var numOfbite = 0;
+var pizzaEaten = 1;
 
 //Init
+closePage.style.display = "none";
+
 
 for (let i = 0; i < onePizzabtn.length; i++) {
   onePizzabtn[i].addEventListener("click", function () {
@@ -45,13 +55,22 @@ for (let i = 0; i < onePizzabtn.length; i++) {
     NextPizza();
   });
 
+  EatBtn.addEventListener("click", function () {
+    Eat();
+  });
+
   backBtn.addEventListener("click", function () {
     BackPizza();
   });
 
-  for (let i = 0; i <= 5; i++) {
-  poster[i].addEventListener("click", function(){DisplayThisPoster(i)});
-}
+    closePage.addEventListener("click", function () {
+    closeAllPage();
+  });
+
+  for (let i = 0; i <= 5; i++) 
+  {
+    poster[i].addEventListener("click", function(){DisplayThisPoster(i);});
+  }
 
 
 
@@ -69,7 +88,11 @@ function hideall(){ //function to hide all pages
     }
 }
 
+function closeAllPage(){
+hideall();
+closePage.style.display = "none";
 
+}
 
 
 function showPage(pagenum){
@@ -77,10 +100,47 @@ function showPage(pagenum){
     let onepage = document.querySelector("#page" + pagenum);
     onepage.style.display="flex";
    pageSound.play();
+closePage.style.display = "flex";
     
     
 }
 
+function Eat() {
+  // Check if pressing is allowed
+  if (Canpress === false) {
+    Canpress = true;
+
+    eatSound.pause();
+    eatSound.currentTime = 0;
+    eatSound.play();
+    numOfbite = parseInt(numOfbite) + 1;
+
+    if (pizzaEaten < 4){
+      pizzaEaten = parseInt(pizzaEaten) + 1;
+    }
+    else{
+      pizzaEaten = 1;
+
+    }
+  
+
+    //change sprite
+    personSprite.src = "images/Person1.png";
+    EatBtn.innerHTML = "Eat - " + numOfbite + " Bites";
+    pizzaSprite.src = "images/eat" + pizzaEaten + ".png";
+
+    pizzaSprite.classList.add("pizzaAte");
+
+
+    // Reset person sprite and allow press again after a delay
+    setTimeout(function() {
+      personSprite.src = "images/Person2.png";
+      Canpress = false;
+      pizzaSprite.classList.remove("pizzaAte");
+
+    }, 100);
+  }
+}
 
 
 
@@ -121,7 +181,9 @@ hamBtn.innerHTML="Open Menu"; //change button text open menu
 function DisplayThisPizzaInfo(id)
 {
 //change pizza Image
-   onePizzaImg.src = "images/Pizzas/Pizza"+id+".png"
+   onePizzaImg.src = "images/Pizzas/Pizza"+id+".png";
+    clickSound.pause();
+    clickSound.currentTime = 0;
    clickSound.play();
 
    switch (id)
@@ -192,6 +254,8 @@ function BackPizza()
 //Display Poster
 function DisplayThisPoster(shownum) {
 
+  posterSound.pause();
+    posterSound.currentTime = 0;
    posterSound.play();
 
   switch (shownum) {
@@ -244,24 +308,17 @@ function PlayImageFade(){
 
   setTimeout(function(){
       showImage.classList.remove("LandscapePoster");
-  }, 500)
+  }, 500);
 
 }
 
 document.addEventListener('keydown', function (kbEvt) {
 //kbEvt: an event object passed to callback function
 console.log(kbEvt); //see what is returned
-if (kbEvt.code === "ArrowRight"){
-MovePos(10,0);
-}
-if (kbEvt.code === "ArrowLeft"){
-MoveLeft(-10, 0);
-}
-if (kbEvt.code === "ArrowDown"){
-MovePos(0, 10);
-}
-if (kbEvt.code === "ArrowUp"){
-MovePos(0, -10);
+
+
+if (kbEvt.code === "Space"){
+Eat();
 }
 //Better option: use switch case instead
 });
