@@ -1,0 +1,379 @@
+.page {
+    flex-direction: column;
+    margin: 50px auto;
+    width: 80%;
+    animation-name: PageEntry;
+    animation-duration: 0.5s;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Page Animation from Up to Down */
+@keyframes PageEntry {
+    from {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    to {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Poster Animation Fade */
+@keyframes PosterFade {
+    from {
+        opacity: 0;
+        border-radius: 0px;
+    }
+    to {
+        opacity: 1;
+        border-radius: 20px;
+    }
+}
+
+@keyframes PizzaEaten {
+    from {
+        opacity: 0;
+        padding: 10px;
+    }
+    to {
+        opacity: 1;
+        padding: 0px;
+    }
+}
+
+.pizzaAte {
+    animation-name: PizzaEaten;
+    animation-duration: 0.2s;
+}
+
+#closeButton {
+    display: flex;
+    justify-content: center;
+}
+
+#Close {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+#Close:hover {
+    opacity: 1;
+}
+
+.PageContent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.PageContent h1 {
+    font-size: 40px;
+}
+
+.oddNum {
+    background-color: #5D7F03;
+    padding: 5px;
+    color: white;
+}
+
+.evenNum {
+    background-color: #FF0000;
+    padding: 5px;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    padding: 20px;
+}
+
+/* === Fonts === */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('font/poppins-regular-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: MyCustomFont;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+#qrCodeImg {
+    display: flex;
+    justify-content: left;
+    margin: 0 10px;
+}
+
+button {
+    width: 180px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    width: 200px;
+    color: white;
+    background-color: #5D7F03;
+}
+
+/* Page 2 */
+#pizzaDisplay {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pizzaDisplay div strong {
+    color: white;
+    background-color: #5D7F03;
+    padding: 5px;
+}
+
+#nextAndBack {
+    display: none;
+}
+
+#pizzaSelector {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#pizzaSelector table tr td img {
+    width: 200px;
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
+#pizzaSelector table tr td img:hover {
+    width: 210px;
+    opacity: 1;
+}
+
+/* Page 3 */
+
+#showCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#showCard img {
+    border-radius: 20px;
+}
+
+#posterSelector table tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.poster {
+    height: 250px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.poster:hover {
+    height: 260px;
+    opacity: 1;
+}
+
+/* Minigame CSS */
+#minigameSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
+
+#controls {
+    padding: 0 10px;
+}
+
+#Minigame {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#gamecontent {
+    background-color: #e0e0e0;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+}
+
+#gamecontent h2 {
+    padding: 20px 0;
+    background-color: #FF0000;
+    color: white;
+}
+
+#eat {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#eat button {
+    height: 30px;
+}
+
+#sprites {
+    display: flex;
+    justify-content: center;
+}
+
+#closepage {
+    display: none;
+}
+
+/* CSS for responsive menu */
+#hamIcon {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    nav ul li {
+        display: block;
+    }
+
+    #hamIcon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li button {
+        height: 30px;
+    }
+
+    #qrCodeImg {
+        display: none;
+    }
+
+    #pizzaSelector {
+        display: none;
+    }
+
+    #nextAndBack {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #nextAndBack button {
+        background-color: #C9C9C9;
+        width: 100px;
+        margin: 0 10px;
+    }
+
+    #nextAndBack button:hover {
+        background-color: #5D7F03;
+        color: white;
+        width: 110px;
+    }
+
+    #showCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #showCard img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 400px) {
+    .PageContent {
+        text-align: center;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header img {
+        height: 100px;
+    }
+
+    #pizzaDisplay {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .poster {
+        height: 130px;
+        transition: 0.3s;
+    }
+
+    .poster:hover {
+        height: 135px;
+    }
+
+    #sprites img {
+        height: 150px;
+    }
+
+    #minigameSection {
+        flex-direction: column;
+    }
+
+    #controls {
+        padding: 25px 0;
+    }
+
+    #gamecontent {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+/* To unhide menu items */
+.menuShow {
+    display: block;
+}
+
+.LandscapePoster {
+    animation-name: PosterFade;
+    animation-duration: 0.5s;
+}
