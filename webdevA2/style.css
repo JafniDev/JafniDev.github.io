@@ -50,9 +50,11 @@
     animation-duration: 0.2s;
 }
 
-#closeButton {
+#closeButton 
+{
     display: flex;
     justify-content: center;
+    
 }
 
 #Close {
@@ -115,7 +117,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 10px 10px;
     list-style-type: none;
 }
 
@@ -328,8 +330,9 @@ button:hover {
 
     nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
+
 
     header img {
         height: 100px;
@@ -339,6 +342,12 @@ button:hover {
         width: 100%;
         flex-direction: column;
         justify-content: center;
+    }
+
+#pizzaDisplay img
+ {
+        width: 250px;
+       
     }
 
     .poster {
@@ -356,6 +365,7 @@ button:hover {
 
     #minigameSection {
         flex-direction: column;
+        padding: 10px 50px;
     }
 
     #controls {
@@ -365,6 +375,23 @@ button:hover {
     #gamecontent {
         width: 300px;
         height: 200px;
+    }
+
+    
+}
+
+@media (max-width: 320px) {
+
+    #pizzaDisplay img
+ {
+        width: 150px;
+       
+    }
+
+    #showCard img
+    {
+        width: 220px;
+       
     }
 }
 
