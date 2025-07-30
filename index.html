@@ -3,173 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="images/x-icon" href="favicon.ico">
+
     <title>Document</title>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-    <img src="images/PizzaLogoSmall.png" height="50" alt="Pizza logo" title="Pizza logo">
-    <nav> 
-        <button id="hamIcon">Open Menu</button>
-        <ul>
-            <li><button id="page1btn"><b>History Of Pizza</b></button></li>
-            <li><button id="page2btn"><b>Types of Pizza</b></button></li>
-            <li><button id="page3btn"><b>Shows about Pizza</b></button></li>
-        </ul>
-    </nav>
-    <button id="closepage"><b>Close Page</b></button>
+<h1>Pizza Facts</h1>
 </header>
+<nav> 
+    <button id="hamIcon">Open Menu</button>
+<ul>
+<li><button id="page1btn">History Of Pizza</button></li>
+<li><button id="page2btn">Types of Pizza</button></li>
+<li><button id="page3btn">Shows about Pizza</button></li>
+<li><button id="closepage">Close Page</button></li>
 
+</ul>
+</nav>
 <main id="pagecontainer">
 
-    <div id="closeButton">
-        <img src="images/BackIcon.png" width="100" id="Close" alt="Back icon" title="Back">
+
+  <div id="PlayMinigame">
+ <img src="images/PizzaLogo.png" alt="playicon" title="playicon" id="playIcon">
+  </div>
+
+  <div id="Minigame">
+    
+    <div id="MinigameTop">
+    <h1 id="score">0/10</h1>
+    <h1>Score</h1>
+    </div>
+    <div id="MinigameMiddle">
+    <img src="images/Idle1.png" height="300px" id="character">
+    <h2 id="questions">What is this Question?</h2>
+    </div>
+    <div id="correct"><p>Correct Score +1</p></div>
+    <div id="wrong"><p>Wrong</p></div>
+    <div id="MinigameBottom">
+<ul>
+  <li class="AnswerBtn"><img src=""></li>
+  <li class="AnswerBtn"><img src=""></li>
+  <li class="AnswerBtn"><img src=""></li>
+  <li class="AnswerBtn"><img src=""></li>
+
+</ul>
+</div>
+  </div>
+
+  <div id="resultScreen">
+    <div class="topicTitle">
+    <h1>Finish!</h1>
+    </div>
+    <h1>Total Score</h1>
+    <h2 id="displayScore">0/10</h2>
+    <h1>Rank</h1>
+    <h2 id="displayRank">D</h2>
+
+     <div class="backIcon">
+    <img src="images/BackIcon.png" alt="backIcon" width="120" id="sticker1">
+    </div>
+  </div>
+
+<section class="page" id="page1">
+
+    <div class="topicTitle">
+    <h1>The History of Pizza</h1>
     </div>
 
-    <section class="page" id="page1">
-        <div class="PageContent">
-            <h1>The Evolution of Pizza Through History</h1>
+    <!--For Padding-->
+<div class="info">
+    <section>
+        <div class="imageandtextinOne">
+<div>
+        <h2>1. Ancient Origins</h2>
+        <p>Early forms of pizza date back to ancient civilizations such as the Egyptians, Greeks, and Romans, who ate flatbreads topped with herbs, oils, and cheese.</p>
+        <p>In the 6th century BCE, <b style="color: #DF5605;">Persian soldiers reportedly baked flatbreads with cheese and dates on their shields over fire</b> — an early concept of portable pizza.</p>
+        </div>
+        <div>
+        <img src="images/PersianSoldier.png" alt="picture of soldier" width="350" id="sticker1">
+</div>
+        </div>
 
-            <div class="card">
-                <h2>Introduction</h2>
-                <p>Pizza is one of the world's most beloved foods, but its story goes far beyond mozzarella and tomato sauce. From humble origins to international fame, pizza’s history is a fascinating tale of cultural exchange, innovation, and globalization.</p>
-            </div>
+    </section>
 
-            <div class="card">
-                <h2 class="oddNum">01</h2>
-                <h2>Ancient Roots: The Origins of Flatbread Dishes</h2>
-                <p>Long before the word “pizza” existed, ancient Egyptians, Greeks, and Romans were baking flatbreads topped with oil, herbs, and cheese. The Greek <em>plakous</em> and Roman <em>picea</em> may be early ancestors of what we now call pizza.</p>
-            </div>
+    <section>
+        <div class="imageandtextinOne">
+            <div>
+        <img src="images/naples.png" alt="picture of naples" width="500">
+        </div>
+<div class="infotext">
+    <h2>2. Birth of Modern Pizza – Naples, Italy (1700s–1800s)</h2>
+        <p>Naples is widely recognized as the birthplace of modern pizza. In the 18th century, working-class Neapolitans began adding tomatoes to flatbread, creating what we now know as pizza.</p>
+        <p>These pizzas were inexpensive and sold on the streets as fast food for the poor.</p>
+        </div>
 
-            <div class="card">
-                <h2 class="evenNum">02</h2>
-                <img src="images/naples.png" width="200" alt="Historic view of Naples" title="Pizza’s birthplace: Naples, Italy">
-                <h2>Pizza’s Birthplace: Naples, Italy</h2>
-                <p>Modern pizza was born in 18th-century Naples as affordable street food for the working class. These early pizzas were topped with simple ingredients like garlic, salt, lard, and anchovies.</p>
-            </div>
-
-            <div class="card">
-                <h2 class="oddNum">03</h2>
-                <img src="images/pizza.png" width="200" alt="Margherita pizza" title="Pizza Margherita">
-                <h2>The Margherita Pizza and Royal Recognition</h2>
-                <p>In 1889, Queen Margherita of Savoy visited Naples. Chef Raffaele Esposito created a pizza with tomato, mozzarella, and basil—representing the Italian flag’s colors—and named it in her honor: <strong>Pizza Margherita</strong>.</p>
-            </div>
-
-            <div class="card">
-                <h2 class="evenNum">04</h2>
-                <h2>Pizza Crosses the Atlantic</h2>
-                <p>Italian immigrants introduced pizza to the United States in the early 20th century. The first U.S. pizzeria, <strong>Lombardi’s</strong>, opened in New York City in 1905, and pizza quickly gained popularity in urban immigrant communities.</p>
-            </div>
-
-            <div class="card">
-                <h2 class="oddNum">05</h2>
-                <h2>Post-War Popularity Explosion</h2>
-                <p>After World War II, returning American soldiers who had tasted pizza in Italy helped spark a nationwide pizza boom. This led to the rise of major chains like Pizza Hut (1958) and Domino’s (1960), transforming pizza into a mainstream staple.</p>
-            </div>
-
-            <div class="card">
-                <h2 class="evenNum">06</h2>
-                <img src="images/Pizzas/ExtraPizza.png" width="200" alt="Various regional pizza styles" title="Regional pizza styles and global variations">
-                <h2>Regional Styles and Global Variations</h2>
-                <p><strong>Neapolitan:</strong> Thin, simple, with a charred crust and fresh ingredients</p>
-                <p><strong>New York-style:</strong> Thin, foldable slices with wide appeal</p>
-                <p><strong>Chicago deep-dish:</strong> Thick and hearty, baked in a pan</p>
-                <p><strong>California:</strong> Gourmet and experimental with fresh toppings</p>
-                <p><strong>Global takes:</strong> Sushi pizza (Japan), paneer tikka pizza (India), and more</p>
-                <p>Pizza has evolved into a global food, adapting to local tastes while maintaining its essential charm. ------------------------------------</p>
-            </div>
-
-            <div class="card">
-                <h2 class="oddNum">07</h2>
-                <h2>Pizza in Pop Culture and Economics</h2>
-                <p>Today, pizza is not only food—it’s a cultural icon. It appears in movies, memes, political discussions, and economic reports. Pizza sales generate billions globally, making it a central part of the fast-food economy.</p>
-            </div>
-
-            <div class="card">
-                <h2>Conclusion</h2>
-                <p>From ancient flatbreads to gourmet pies, pizza’s journey mirrors human history—migration, creativity, and adaptation. No matter where you are in the world, there’s a version of pizza to enjoy—each slice with its own story.</p>
-            </div>
         </div>
     </section>
 
-    <section class="page" id="page2">
-        <div class="PageContent">
-            <div id="pizzaDisplay">
-                <div>
-                    <img src="images/Pizzas/Pizza1.png" id="pizzaImg" alt="Neapolitan pizza image" title="Neapolitan Pizza (Italy)">
-                </div>
-                <div>
-                    <h1 id="pizzanameInfo">Neapolitan Pizza (Italy)</h1>
-                    <div><strong>Crust:</strong> <p id="crustInfo">Thin, soft, slightly charred; puffy edges</p></div>
-                    <div><strong>Toppings:</strong> <p id="toppingInfo">Tomatoes, mozzarella di bufala, basil, olive oil; often made to traditional standards</p></div>
-                </div>
-            </div>
-        </div>
-        <div id="nextAndBack">
-            <button id="backBtn">Back</button>
-            <button id="nextBtn">Next</button>
-        </div>
-        <div id="pizzaSelector">
-            <table>
-                <tr>
-                    <td><img src="images/Pizzas/Pizza1.png" width="200" class="pizzaBtn" alt="Pizza 1" title="Neapolitan Pizza"></td>
-                    <td><img src="images/Pizzas/Pizza2.png" width="200" class="pizzaBtn" alt="Pizza 2" title="Pizza 2"></td>
-                    <td><img src="images/Pizzas/Pizza3.png" width="200" class="pizzaBtn" alt="Pizza 3" title="Pizza 3"></td>
-                    <td><img src="images/Pizzas/Pizza4.png" width="200" class="pizzaBtn" alt="Pizza 4" title="Pizza 4"></td>
-                </tr>
-                <tr>
-                    <td><img src="images/Pizzas/Pizza5.png" width="200" class="pizzaBtn" alt="Pizza 5" title="Pizza 5"></td>
-                    <td><img src="images/Pizzas/Pizza6.png" width="200" class="pizzaBtn" alt="Pizza 6" title="Pizza 6"></td>
-                    <td><img src="images/Pizzas/Pizza7.png" width="200" class="pizzaBtn" alt="Pizza 7" title="Pizza 7"></td>
-                    <td><img src="images/Pizzas/Pizza8.png" width="200" class="pizzaBtn" alt="Pizza 8" title="Pizza 8"></td>
-                </tr>
-            </table>
-        </div>
+    <section>
+        <div class="imageandtextinOne">
+            <div>
+        <h2>3. Margherita Pizza (1889)</h2>
+        <p>In 1889, Queen Margherita of Savoy visited Naples. Chef Raffaele Esposito created a pizza using tomatoes, mozzarella, and basil to represent the Italian flag. He named it <strong>Pizza Margherita</strong>.</p>
+    </div>
+    <div>
+        <img src="images/pizza.png" alt="picture of magarita pizza" width="500">
+
+    </div>
+    </div>
     </section>
 
-    <section class="page" id="page3">
-        <div class="PageContent">
-            <div id="showCard">
-                <img src="images/reallydoughLandscape.png" width="500" id="CurrentShow" alt="Really Dough? show landscape" title="Really Dough?">
-                <h1 id="ShowTitle">Really Dough?</h1>
-                <p id="ShowDesc">Really Dough? is a web series from Thrillist where Mark Iacono, a pizza traditionalist, and Scott Wiener, a pizza enthusiast, explore the definition of pizza by trying unconventional toppings and preparations...</p>
-            </div>
-            <div id="posterSelector">
-                <table>
-                    <tr>
-                        <td><img src="images/reallydoughPotrait.png" alt="Really Dough? poster" title="Really Dough?" height="250" class="poster"></td>
-                        <td><img src="images/OneBitePortrait.png" alt="One Bite poster" title="One Bite" height="250" class="poster"></td>
-                        <td><img src="images/ThePizzaShowPortrait.png" alt="The Pizza Show poster" title="The Pizza Show" height="250" class="poster"></td>
-                        <td><img src="images/ChefTablePIzzaPortrait.png" alt="Chef's Table Pizza poster" title="Chef's Table: Pizza" height="250" class="poster"></td>
-                        <td><img src="images/PizzaBoysPortrait.png" alt="Pizza Boys poster" title="Pizza Boys" height="250" class="poster"></td>
-                        <td><img src="images/SlicedPotrait.png" alt="Sliced poster" title="Sliced" height="250" class="poster"></td>
-                    </tr>
-                </table>
-            </div>
+    <section>
+        <div class="imageandtextinOne">
+
+        <img src="images/firstPizzaRestaurant.png" alt="picture of Lombardi's" width="500">
+            <div></div>
+            <div>
+        <h2>4. Pizza in America (Early 1900s)</h2>
+        <p>Italian immigrants brought pizza to the United States, especially in cities like New York and Chicago.</p>
+        <p>The first documented U.S. pizzeria was <strong>Lombardi's</strong>, which opened in New York City in 1905.</p>
         </div>
+    </div>
+
     </section>
 
-    <section id="minigameSection">
-        <img id="qrCodeImg" src="images/QRCode.png" height="200" alt="QR Code for pizza game" title="Scan to play the pizza game">
-        <div id="Minigame">
-            <div id="gamecontent">
-                <div id="sprites">
-                    <img src="images/Person2.png" height="250" id="personSprite" alt="Person sprite" title="Player character">
-                    <img src="images/eat1.png" height="250" id="pizzaSprite" alt="Pizza sprite" title="Pizza to eat">
-                </div>
-                <h2 id="EatBtn">Eat - 0 Bites</h2>
-            </div>
-        </div>
-        <div id="controls">
-            <h2>How to Play</h2>
-            <p>Tap/Click the Eat</p>
-            <p>Press Space to Bite</p>
-        </div>
+    <section>
+        <h2>5. Post-WWII Boom</h2>
+        <p>After World War II, returning American soldiers who had been stationed in Italy popularized pizza in the U.S. It spread beyond Italian-American communities and entered mainstream culture.</p>
     </section>
+
+    <section>
+        <h2>6. Global Expansion (Late 20th Century–Today)</h2>
+        <p>Pizza chains like Domino’s, Pizza Hut, and Papa John’s helped spread pizza around the world. Regional varieties emerged, including:</p>
+        <ul>
+            <li>Chicago Deep Dish (USA)</li>
+            <li>Okonomiyaki (Japan)</li>
+            <li>Lahmacun (Middle East)</li>
+            <li>Hawaiian Pizza (Canada)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Pizza evolved from humble flatbreads to a globally loved dish. From Naples to New York to Tokyo, it reflects centuries of culinary adaptation and cultural exchange.</p>
+    </section>
+
+    <div class="backIcon">
+    <img src="images/BackIcon.png" alt="backIcon" width="120" id="sticker1">
+    </div>
+
+</div>
+</section>
+
+<section class="page" id="page2">
+     <div class="topicTitle">
+<h1>Types of Pizza</h1>
+</div>
+
+<table>
+  <tr>
+    <td>
+      <h3>1. Neapolitan Pizza (Italy)</h3>
+      <img src="images/Pizzas/Pizza1.png" width="300" alt="Neapolitan Pizza" title="Neapolitan Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Thin, soft, slightly charred; puffy edges</li>
+        <li class="pizza-name">Toppings:</li><li>Tomatoes, mozzarella di bufala, basil, olive oil</li>
+        <li class="note">often made to traditional standard</li>
+      </ul>
+    </td>
+    <td>
+      <h3>2. New York-Style Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza2.png" width="300" alt="New York-Style Pizza" title="New York-Style Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Large, thin, and foldable; crisp edges</li>
+        <li class="pizza-name">Toppings:</li><li>Tomato sauce, mozzarella, various meats and veggies</li>
+        <li class="note">Popular in NYC and best eaten folded</li>
+      </ul>
+    </td>
+    <td>
+      <h3>3. Chicago Deep-Dish Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza3.png" width="300" alt="Chicago Deep-Dish Pizza" title="Chicago Deep-Dish Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Deep, buttery, pie-like crust</li>
+        <li class="pizza-name">Toppings:</li><li>Cheese on bottom, then meat/veggies, chunky tomato sauce on top</li>
+        <li class="note">Very filling; eaten with a fork and knife</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>4. Sicilian Pizza (Italy / USA)</h3>
+      <img src="images/Pizzas/Pizza4.png" width="300" alt="Sicilian Pizza" title="Sicilian Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Thick, square, focaccia-style</li>
+        <li class="pizza-name">Toppings:</li><li>Tomato sauce, mozzarella, herbs; sometimes anchovies</li>
+        <li class="note">Often square-shaped in the U.S</li>
+      </ul>
+    </td>
+    <td>
+      <h3>5. Detroit-Style Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza5.png" width="300" alt="Detroit-Style Pizza" title="Detroit-Style Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Thick, rectangular, crispy cheesy edges</li>
+        <li class="pizza-name">Toppings:</li><li>Wisconsin brick cheese, sauce ladled on top</li>
+        <li class="note">Baked in rectangular steel pans</li>
+      </ul>
+    </td>
+    <td>
+      <h3>6. California-Style Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza6.png" width="300" alt="California-Style Pizza" title="California-Style Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Thin and crisp</li>
+        <li class="pizza-name">Toppings:</li><li>Gourmet and fresh (arugula, goat cheese, smoked salmon, etc.)</li>
+        <li class="note">known for nontraditional toppings</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>7. Greek Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza7.png" width="300" alt="Greek Pizza" title="Greek Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Oily, chewy, pan-cooked</li>
+        <li class="pizza-name">Toppings:</li><li>Tomato sauce with oregano, feta, olives, red onion</li>
+        <li class="note">Popular in Greek-American restaurants</li>
+      </ul>
+    </td>
+    <td>
+      <h3>8. St. Louis-Style Pizza (USA)</h3>
+      <img src="images/Pizzas/Pizza8.png" width="300" alt="St. Louis-Style Pizza" title="St. Louis-Style Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Ultra-thin, cracker-like</li>
+        <li class="pizza-name">Toppings:</li><li>Provel cheese (cheddar + Swiss + provolone)</li>
+        <li class="note">Cut into squares (“party cut”)</li>
+      </ul>
+    </td>
+    <td>
+      <h3>9. Hawaiian Pizza (Canada)</h3>
+      <img src="images/Pizzas/Pizza9.png" width="300" alt="Hawaiian Pizza" title="Hawaiian Pizza">
+      <ul>
+        <li class="pizza-name">Crust:</li><li>Varies (typically pan crust or thin)</li>
+        <li class="pizza-name">Toppings:</li><li>Ham, pineapple (sometimes bacon)</li>
+        <li class="note">Invented by a Greek-Canadian; widely debated style</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <h3>10. International Varieties</h3>
+      <img src="images/Pizzas/ExtraPizza.png" width="300" alt="International Pizza Varieties" title="International Pizza Varieties">
+      <ul id="lastPizzaList">
+        <li><strong>Japan:</strong> Mayo Jaga (mayonnaise, potato, corn, sausage)</li>
+        <li><strong>India:</strong> Paneer tikka, chicken tandoori pizzas</li>
+        <li><strong>Brazil:</strong> Green peas, hard-boiled eggs, catupiry cheese</li>
+        <li><strong>Middle East:</strong> Manakish or Lahmacun with meats and spices</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+ <div class="backIcon">
+    <img src="images/BackIcon.png" alt="backIcon" width="120" id="sticker1">
+    </div>
+
+</section>
+
+<section class="page" id="page3">
+      <div class="topicTitle">
+<h1>Shows about Pizza</h1>
+</div>
+ <div id="Shows">
+        <div id="CurrentShow"><img src="images/reallydoughLandscape.png" alt="really dough" title="reallydoughPotrait" height="300" class="LandscapePoster">
+        <h1 id="ShowTitle">Really Dough?</h1>
+        <p id="ShowDesc">Really Dough?" is a web series from Thrillist where Mark Iacono, a pizza traditionalist, and Scott Wiener, a pizza enthusiast, explore the definition of pizza by trying unconventional toppings and preparations. The show highlights their contrasting views, with Mark adhering to strict rules (sauce, cheese, dough) and Scott embracing creative interpretations. The series delves into whether these experimental pizzas, like kimchi pizza or deep-dish, truly qualify as pizza. </h1>
+</div>
+            <div id="ListOfShows">  
+    <table>
+        <tr>
+            <td><img src="images/reallydoughPotrait.png" alt="Really Dough" title="Really Dough" height="300" class="poster"></td>
+            <td><img src="images/OneBitePortrait.png" alt="One Bite" title="One Bite" height="300" class="poster"></td>
+            <td><img src="images/ThePizzaShowPortrait.png" alt="The Pizza Show" title="The Pizza Show" height="300" class="poster"></td>
+        </tr>
+        <tr>
+            <td><img src="images/ChefTablePIzzaPortrait.png" alt="Chef's Table: Pizza" title="Chef's Table: Pizza" height="300" class="poster"></td>
+            <td><img src="images/PizzaBoysPortrait.png" alt="Pizza Boys" title="Pizza Boys" height="300" class="poster"></td>
+            <td><img src="images/SlicedPotrait.png" alt="Sliced" title="Sliced" height="300" class="poster"></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+<div class="backIcon">
+    <img src="images/BackIcon.png" alt="backIcon" width="120">
+    </div>
+</section>
 
 </main>
 
+<footer>
+<img id="qrCodeImg" src="images/QRCode.png">
+</footer>
+
 </body>
+
 </html>

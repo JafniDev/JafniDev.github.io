@@ -1,98 +1,70 @@
-.page {
+.page{
+
     flex-direction: column;
-    margin: 50px auto;
+    margin: auto;
     width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     animation-name: PageEntry;
     animation-duration: 0.5s;
     background-color: #F2F2F2;
     border-radius: 20px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+     overflow: hidden;
 }
 
-/* Page Animation from Up to Down */
+/*Page Animation from Up to Down*/
 @keyframes PageEntry {
-    from {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    to {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
+from  
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+
+
+
 }
 
-/* Poster Animation Fade */
+to 
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    
+}
+}
+
+
+
+/*Poster Animation Fade*/
 @keyframes PosterFade {
-    from {
-        opacity: 0;
-        border-radius: 0px;
-    }
-    to {
-        opacity: 1;
-        border-radius: 20px;
-    }
+from  
+{
+    opacity: 0;
+    height: 280px;
 }
 
-@keyframes PizzaEaten {
-    from {
-        opacity: 0;
-        padding: 10px;
-    }
-    to {
-        opacity: 1;
-        padding: 0px;
-    }
-}
-
-.pizzaAte {
-    animation-name: PizzaEaten;
-    animation-duration: 0.2s;
-}
-
-#closeButton {
-    display: flex;
-    justify-content: center;
-}
-
-#Close {
-    opacity: 0.5;
-    transition: 0.2s;
-}
-
-#Close:hover {
+to 
+{
     opacity: 1;
+    height: 300px;
+
+    
+}
 }
 
-.PageContent {
+/*
+#page1{}
+#page2{}
+#page3{}
+*/
+
+header{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
-}
-
-.PageContent h1 {
-    font-size: 40px;
-}
-
-.oddNum {
-    background-color: #5D7F03;
-    padding: 5px;
+    justify-content: center;
+    background-color: #6B1100;
     color: white;
-}
-
-.evenNum {
-    background-color: #FF0000;
-    padding: 5px;
-    color: white;
-}
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    color: black;
-    padding: 20px;
 }
 
 /* === Fonts === */
@@ -105,275 +77,372 @@ header {
 
 body {
     font-family: MyCustomFont;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
-nav ul {
+nav{
+    
     display: flex;
-    flex-direction: row;
-}
-
-nav ul li {
-    margin: 0 10px;
-    list-style-type: none;
-}
-
-#qrCodeImg {
-    display: flex;
-    justify-content: left;
-    margin: 0 10px;
-}
-
-button {
-    width: 180px;
-    border-radius: 20px;
-    color: black;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    border: none;
-    transition: 0.5s;
-}
-
-button:hover {
-    width: 200px;
-    color: white;
-    background-color: #5D7F03;
-}
-
-/* Page 2 */
-#pizzaDisplay {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    background-color: #8F1800;
+
 }
 
-#pizzaDisplay div strong {
-    color: white;
-    background-color: #5D7F03;
-    padding: 5px;
+
+nav ul li{
+display:inline;
+
+
 }
 
-#nextAndBack {
+#closepage{
     display: none;
 }
 
-#pizzaSelector {
+#qrCodeImg{
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-
-#pizzaSelector table tr td img {
-    width: 200px;
-    transition: 0.2s;
-    opacity: 0.5;
-}
-
-#pizzaSelector table tr td img:hover {
-    width: 210px;
-    opacity: 1;
-}
-
-/* Page 3 */
-
-#showCard {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: auto;
 }
 
-#showCard img {
+nav ul li button{
+
+    width: 180px;
     border-radius: 20px;
+    color: #8F1800;
+    background-color: white;
+    padding: 5px;
+     border: none;
+     transition: 0.5s;
 }
 
-#posterSelector table tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+nav ul li button:hover{
+
+    color: white;
+    background-color: #DF5605;
+    width: 200px;
+
 }
 
-.poster {
-    height: 250px;
-    opacity: 0.8;
+.topicTitle{
+    background-color: #DF5605;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    
+}
+
+
+#playIcon{
+    width: 500px;
     transition: 0.2s;
 }
 
-.poster:hover {
-    height: 260px;
-    opacity: 1;
+#playIcon:hover{
+    width: 600px;
+
 }
 
-/* Minigame CSS */
-#minigameSection {
+.info{
+    padding: 0px 20px;
+}
+
+table{
+    text-align: center;
+   
+}
+
+
+table td{
+
+background-color: white;
+
+}
+
+table td ul li{
+list-style-type:decimal;
+text-align: left;
+}
+
+table h3{
+    color: white;
+    background-color: #648908;
+    padding: 5px 0px;
+}
+
+.infotext{
+    padding: 0px 20px;
+
+}
+
+.page h2{
+    background-color: #648908;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.imageandtextinOne{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 50px;
+    justify-content: space-between;
 }
 
-#controls {
-    padding: 0 10px;
+ #lastPizzaList li
+ {
+list-style-type:none;
+
+        text-align: center;
 }
 
-#Minigame {
+
+.backIcon{
     display: flex;
     justify-content: center;
-    text-align: center;
+    padding: 10px;
+
 }
 
-#gamecontent {
-    background-color: #e0e0e0;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+.backIcon img{
+
+    width: 120px;
+transition: 0.5s;
+}
+
+.backIcon img:hover{
+
+    width: 130px;
+    
+}
+
+#Shows{
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: 300px;
+    flex-direction: row;
 }
 
-#gamecontent h2 {
-    padding: 20px 0;
-    background-color: #FF0000;
+#Shows div{
+    padding: 10px;
+}
+
+#CurrentShow{
+    width: 530px;
+}
+
+.LandscapePoster{
+    animation-name: PosterFade;
+    animation-duration: 0.5s;
+}
+
+#ShowTitle{
+    background-color: #8F1800;
+    padding: 10px 5px;
     color: white;
 }
 
-#eat {
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
+
+
+#ListOfShows table tr td img{
+transition: 0.15s;
 }
 
-#eat button {
+#ListOfShows table tr td img:hover{
+    border: #8F1800 5px solid;
+   
+
+}
+
+#PlayMinigame{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+
+}
+
+#Minigame
+{   
+    flex-direction: column;
+    justify-content: center;
+    
+    background-image: url("images/MinigameBackground.png");
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1280px;
+
+}
+
+#resultScreen
+{   
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #EAEAEA;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1280px;
+
+}
+
+
+
+#MinigameTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#MinigameTop h1{
+    padding: 0px 10px;
+}
+
+#MinigameMiddle{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+#MinigameBottom{
+    
+    background-color: rgba(0, 0, 0, 0.5);;
+    
+}
+
+#MinigameBottom ul{
+    
+     display: flex;
+    flex-direction: row;
+
+    
+   
+}
+
+#MinigameBottom ul li{
+    
+ display: flex;
+ justify-content: center;
+    
+background-color: aliceblue;
+border-radius: 50px;
+
+margin: 0px 10px;
+
+width: 300px;
+height: 100px;
+transition: 0.2s;
+}
+
+#MinigameBottom ul li:hover{
+    
+     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+background-color: #648908;
+color: white;
+
+}
+
+#MinigameBottom ul li p{
+    
+margin: auto;
+}
+
+#correct{
+    display: flex;
+    margin: auto;
+    background-color: #648908;
+    color: white;
+    justify-content: center;
+    width: 100%;
+}
+
+#wrong{
+    display: flex;
+    margin: auto;
+    background-color: #8F1800;
+    color: white;
+    justify-content: center;
+    width: 100%;
+}
+
+/*CSS for responsive menu*/
+#hamIcon{display:none;}
+@media (max-width:800px)
+{
+/*make a menu items vertical*/
+nav ul li{display:block;}
+/* unhide menu icon */
+#hamIcon{
+    
+    display:block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    color: #8F1800;
+    background-color: white;
+    border-radius: 20px;
+    height: 85px;
+
+}
+/*hide the menu item list*/
+nav ul{
+    display:none;
+    
+}
+
+nav ul li button{
+
     height: 30px;
 }
 
-#sprites {
-    display: flex;
+.imageandtextinOne img{
+    width: 250px;
+}
+
+table tr{
+display: flex;
+flex-direction: column;
+}
+
+table td ul li{
+
+text-align: center;
+}
+
+#Shows{
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
 }
 
-#closepage {
+#Minigame
+{   
+
+    width: 600px;
+    
+
+
+}
+
+#resultScreen
+{   
+
+    width: 600px;
+
+}
+
+#qrCodeImg{
     display: none;
 }
 
-/* CSS for responsive menu */
-#hamIcon {
-    display: none;
 }
+/*to unhide menu items*/
+.menuShow{
+    
+    display:block;
 
-@media (max-width: 800px) {
-    nav ul li {
-        display: block;
-    }
-
-    #hamIcon {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    nav ul li button {
-        height: 30px;
-    }
-
-    #qrCodeImg {
-        display: none;
-    }
-
-    #pizzaSelector {
-        display: none;
-    }
-
-    #nextAndBack {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #nextAndBack button {
-        background-color: #C9C9C9;
-        width: 100px;
-        margin: 0 10px;
-    }
-
-    #nextAndBack button:hover {
-        background-color: #5D7F03;
-        color: white;
-        width: 110px;
-    }
-
-    #showCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #showCard img {
-        width: 280px;
-    }
-}
-
-@media (max-width: 400px) {
-    .PageContent {
-        text-align: center;
-    }
-
-    header {
-        justify-content: center;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-    }
-
-    header img {
-        height: 100px;
-    }
-
-    #pizzaDisplay {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .poster {
-        height: 130px;
-        transition: 0.3s;
-    }
-
-    .poster:hover {
-        height: 135px;
-    }
-
-    #sprites img {
-        height: 150px;
-    }
-
-    #minigameSection {
-        flex-direction: column;
-    }
-
-    #controls {
-        padding: 25px 0;
-    }
-
-    #gamecontent {
-        width: 300px;
-        height: 200px;
-    }
-}
-
-/* To unhide menu items */
-.menuShow {
-    display: block;
-}
-
-.LandscapePoster {
-    animation-name: PosterFade;
-    animation-duration: 0.5s;
 }
